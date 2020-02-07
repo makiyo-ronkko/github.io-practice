@@ -9,10 +9,14 @@
 	  Hide loading animation after 3 secs 
 	-------------------------------------------------------------------------------*/
     $(document).ready(function () {
+        $('body').prepend('<div class="spinner"></div>');
+        $('.site-wrap').addClass('hide');
+        $('h4').attr('data-aos', 'fade-right');
+
         setTimeout(function () {
             $('.spinner').addClass('hide');
             $('.site-wrap.hide').removeClass('hide');
-        }, 3000);
+        }, 2000);
     });
 
 
